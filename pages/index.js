@@ -1,4 +1,4 @@
-import NextLink from 'next/link'
+import NextLink from "next/link";
 import {
   Link,
   Container,
@@ -8,19 +8,19 @@ import {
   List,
   ListItem,
   useColorModeValue,
-  chakra
-} from '@chakra-ui/react'
-import { ChevronRightIcon } from '@chakra-ui/icons'
-import Paragraph from '../components/paragraph'
-import { BioSection, BioYear } from '../components/bio'
-import Layout from '../components/layouts/article'
-import Section from '../components/section'
-import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5'
-import Image from 'next/image'
+  chakra,
+} from "@chakra-ui/react";
+import { ChevronRightIcon } from "@chakra-ui/icons";
+import Paragraph from "../components/paragraph";
+import { BioSection, BioYear } from "../components/bio";
+import Layout from "../components/layouts/article";
+import Section from "../components/section";
+import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
+import Image from "next/image";
 
 const ProfileImage = chakra(Image, {
-  shouldForwardProp: prop => ['width', 'height', 'src', 'alt'].includes(prop)
-})
+  shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
+});
 
 const Home = () => (
   <Layout>
@@ -30,13 +30,13 @@ const Home = () => (
         mb={6}
         p={3}
         textAlign="center"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        css={{ backdropFilter: 'blur(10px)' }}
+        bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
+        css={{ backdropFilter: "blur(10px)" }}
       >
         Hello, I&apos;m an app developer based in India!
       </Box>
 
-      <Box display={{ md: 'flex' }}>
+      <Box display={{ md: "flex" }}>
         <Box flexGrow={1}>
           <Heading as="h2" variant="page-title">
             Diptesh Mohanta
@@ -109,8 +109,8 @@ const Home = () => (
         <BioSection>
           <BioYear>2020 to present</BioYear>
           <br />
-          Pursuing Bachelars Degree in Computer Engineering at Thapar Institute
-          of Engineering and Technology
+          Pursuing Bachelor&apos;s Degree in Computer Engineering at Thapar
+          Institute of Engineering and Technology
         </BioSection>
       </Section>
 
@@ -172,7 +172,7 @@ const Home = () => (
       </Section>
     </Container>
   </Layout>
-)
+);
 
-export default Home
-export { getServerSideProps } from '../components/chakra'
+export default Home;
+export { getServerSideProps } from "../components/chakra";
