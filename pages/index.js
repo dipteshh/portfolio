@@ -17,6 +17,7 @@ import Layout from "../components/layouts/article";
 import Section from "../components/section";
 import { IoLogoInstagram, IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import Image from "next/image";
+import Contact from "./contact";
 
 const ProfileImage = chakra(Image, {
   shouldForwardProp: (prop) => ["width", "height", "src", "alt"].includes(prop),
@@ -114,14 +115,14 @@ const Home = () => (
         </BioSection>
       </Section>
 
-      <Section delay={0.3}>
+      {/* <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           I ♥
         </Heading>
         <Paragraph>
           Art, Music, Drawing, Movies, Photography, Machine Learning
         </Paragraph>
-      </Section>
+      </Section> */}
 
       <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
@@ -165,10 +166,12 @@ const Home = () => (
             </Link>
           </ListItem>
         </List>
-
+      </Section>
+      <Section delay={0.3}>
         <Heading as="h3" variant="section-title">
           Contact Me
         </Heading>
+        <Contact></Contact>
       </Section>
     </Container>
   </Layout>
